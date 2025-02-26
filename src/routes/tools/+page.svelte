@@ -105,10 +105,10 @@
     display: inline;
   }
   tr.ez:hover {
-    background-color: #1B4D3E;
+    background-color: #704214;
   }
   tr.active td {
-    background-color: #1B4D3E;
+    background-color: #8B5A2B;
     color: white;
   }
   td.center {
@@ -117,7 +117,7 @@
   tr {
     user-select: none;
     cursor: pointer;
-    background-color: #1d6f56;
+    background-color: #8B5A2B;
     color: white;
     font-size: large;
     font-weight: bold;
@@ -140,7 +140,7 @@
     width: 400px;
   }
   tr.cica th {
-    background-color: #013220;
+    background-color: #8B5A2B;
     color: white;
   }
   button.edit:hover {
