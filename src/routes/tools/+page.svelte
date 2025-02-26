@@ -8,11 +8,11 @@
 <h1>Eszközök ({data.user?.name})</h1>
 {#if urlap === 0}
   <button
-    class="ui green small button"
+    class="ui small button custom-btn"
     onclick={() => ((urlap = 1), (edittool = {}))}>Új eszköz</button
   >
 {:else}
-  <button class="ui blue small button" onclick={() => (urlap = 0)}
+  <button class="ui small button custom-btn" onclick={() => (urlap = 0)}
     >Űrlap bezárása (mentés nélkül)</button
   >
   <hr />
@@ -46,7 +46,7 @@
       </select>
     </div>
     <div class="ui divider"></div>
-    <button class="ui green small button">Mentés</button>
+    <button class="ui small button custom-btn-two">Mentés</button>
   </form>
 {/if}
 <table class="ui table">
@@ -105,10 +105,11 @@
     display: inline;
   }
   tr.ez:hover {
-    background-color: lightcyan;
+    background-color: #1B4D3E;
   }
   tr.active td {
-    background-color: lightcoral;
+    background-color: #1B4D3E;
+    color: white;
   }
   td.center {
     text-align: center;
@@ -116,6 +117,10 @@
   tr {
     user-select: none;
     cursor: pointer;
+    background-color: #1d6f56;
+    color: white;
+    font-size: large;
+    font-weight: bold;
   }
   img {
     height: 500px;
@@ -127,13 +132,16 @@
   div.label {
     width: 100px;
     text-align: left;
+    background-color: #4C0013;
+    color: white;
   }
   form {
     display: inline-block;
     width: 400px;
   }
   tr.cica th {
-    background-color: rgb(128, 201, 240);
+    background-color: #013220;
+    color: white;
   }
   button.edit:hover {
     text-shadow: 1px 1px 4px black;
@@ -141,5 +149,12 @@
   button.edit {
     cursor: pointer;
     font-size: 30px;
+  }
+  .custom-btn {
+		background-color: #4C0013;
+		color: white;
+	}
+  .custom-btn-two{
+    background-color: #B87333;
   }
 </style>
