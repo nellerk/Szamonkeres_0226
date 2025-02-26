@@ -16,19 +16,33 @@
         user = data.user
   	})
 </script>
-<div class="ui black inverted pointing menu">
-{#each menu as item} 
-    <a class="item {item.link === path || item.link + "/login" === path ? 'active' : ''}" 
-        href={item.link}>{item.felirat}
-    </a>
-{/each}
-<div class="right menu">
-    <div class="item">
-        <div class="ui white icon input">
-            <input type="text" placeholder="Search...">
-            <i class="search link icon"></i>
+<div class="ui menu custom-navbar">
+    {#each menu as item} 
+        <a class="item {item.link === path || item.link + "/login" === path ? 'active' : ''}" 
+            href={item.link}>{item.felirat}
+        </a>
+    {/each}
+    <div class="right menu">
+        <div class="item">
+            <div class="ui white icon input">
+                <input type="text" placeholder="Search...">
+                <i class="search link icon"></i>
+            </div>
         </div>
     </div>
 </div>
-</div>
 {@render children()}
+
+<style>
+    .custom-navbar {
+        background-color: #B87333 !important;
+    }
+
+    .custom-navbar .item{
+        color: white !important;
+    }
+
+    .custom-navbar .item:hover{
+        background-color: #4C0013 !important;
+    }
+</style>
